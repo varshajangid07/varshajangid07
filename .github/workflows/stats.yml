@@ -1,0 +1,38 @@
+name: Generate Stats Card
+on:
+  schedule:
+    - cron: "0 0 * * *" 
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate stats card (Light Mode)
+        uses: soulteary/github-readme-stats-action@v1.0.0
+        with:
+          card: stats
+          options: 'username=${{ github.repository_owner }}&show_icons=true&theme=default&hide_border=true'
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Generate stats card (Dark Mode)
+        uses: soulteary/github-readme-stats-action@v1.0.0
+        with:
+          card: stats
+          options: 'username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true'
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add profile/stats-light.svg profile/stats-dark.svg
+          git commit -m "Update GitHub Stats for Light and Dark modes" || exit 0
+          git push
