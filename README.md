@@ -68,19 +68,13 @@
 ### 📊 GitHub Stats & Activity
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg">
-    <img alt="GitHub Stats" src="./profile/stats-light.svg">
-  </picture>
+  <img src="./profile/stats-light.svg#gh-light-mode-only" alt="GitHub Stats" />
+  <img src="./profile/stats-dark.svg#gh-dark-mode-only" alt="GitHub Stats" />
 
   <br/><br/>
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/streak-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/streak-light.svg">
-    <img alt="GitHub Streak" src="./profile/streak-light.svg">
-  </picture>
+  <img src="./profile/streak-light.svg#gh-light-mode-only" alt="GitHub Streak" />
+  <img src="./profile/streak-dark.svg#gh-dark-mode-only" alt="GitHub Streak" />
 </div>
 
 ---
