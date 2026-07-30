@@ -73,9 +73,14 @@
     <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg">
     <img alt="GitHub Stats" src="./profile/stats-light.svg">
   </picture>
-  <br/>
-  <br/>
-  <img src="https://streak-stats.demolab.com/?user=varshajangid07&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+
+  <br/><br/>
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/streak-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/streak-light.svg">
+    <img alt="GitHub Streak" src="./profile/streak-light.svg">
+  </picture>
 </div>
 
 ---
