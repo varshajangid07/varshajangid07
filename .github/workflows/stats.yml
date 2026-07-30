@@ -30,15 +30,15 @@ jobs:
           token: ${{ secrets.STATS_TOKEN }}
 
       - name: Fetch Streak Card (Light Mode)
-        run: curl -o profile/streak-light.svg "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&theme=default&hide_border=true"
+        run: curl -L -f -o profile/streak-light.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=default&hide_border=true"
 
       - name: Fetch Streak Card (Dark Mode)
-        run: curl -o profile/streak-dark.svg "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true"
+        run: curl -L -f -o profile/streak-dark.svg "https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true"
           
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add profile/stats-light.svg profile/stats-dark.svg profile/streak-light.svg profile/streak-dark.svg
-          git commit -m "Update GitHub Stats and Streak for Light/Dark modes" || exit 0
+          git commit -m "Fix Streak Card downloads with redirects" || exit 0
           git push
