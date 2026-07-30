@@ -68,7 +68,13 @@
 ### 📊 GitHub Stats & Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=varshajangid07&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg">
+    <img alt="GitHub Stats" src="./profile/stats-light.svg">
+  </picture>
+  <br/>
+  <br/>
   <img src="https://streak-stats.demolab.com/?user=varshajangid07&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
