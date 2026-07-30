@@ -19,7 +19,7 @@ jobs:
           card: stats
           options: 'username=${{ github.repository_owner }}&show_icons=true&theme=default&hide_border=true'
           path: profile/stats-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
           
       - name: Generate stats card (Dark Mode)
         uses: soulteary/github-readme-stats-action@v1.0.0
@@ -27,7 +27,7 @@ jobs:
           card: stats
           options: 'username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true'
           path: profile/stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_TOKEN }}
           
       - name: Commit and push changes
         run: |
