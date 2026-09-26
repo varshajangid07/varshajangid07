@@ -43,6 +43,10 @@
 **My Meowcat:** My latest interactive web project showcasing clean and engaging digital experiences! 
   * 🔗 **Live Demo:** [https://my-meowcat.vercel.app/](https://my-meowcat.vercel.app/)
 
+**eBookShala:** A full-stack digital library web application built with Node.js, Express, MongoDB, Passport.js (Google OAuth), and Socket.io—featuring thousands of classic books, 48+ genre filters, real-time community discussions, and personal reading shelves.
+  * 🔗 **Live Demo:** [https://ebookshala.onrender.com/](https://ebookshala.onrender.com/)
+  * 💻 **Source Code:** [https://github.com/varshajangid07/eBook](https://github.com/varshajangid07/eBook)
+
 <br>
 
 ---
